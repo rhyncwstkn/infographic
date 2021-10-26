@@ -3022,7 +3022,6 @@
   #InfographicContainer {
     position: absolute;
     display: flex;
-    margin-top: -350px;
     align-items: center;
   }
   #InfographicContainer svg {
@@ -4837,4 +4836,11 @@ div#HowWeWorkInfoGraphicText {
     stroke-width: 10;
     stroke-linecap: round;
     transform: translate(5px,5px);
+}
+
+
+@media (min-width: 768px) {
+  #InfographicContainer {
+    margin-top: -350px;
+  }
 }

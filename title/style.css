@@ -20,7 +20,7 @@ body
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 100px;
+    /* padding: 30px 100px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,6 +65,7 @@ section
     justify-content: center;
     align-items: center;
     top: 100px;
+    overflow-x: hidden;
 }
 section::before
 {
@@ -94,8 +95,10 @@ section #text
     text-align: center;
     line-height: 0.55em;
     font-family: 'Rancho', cursive;
-    transform: translateY(-50%);
-    margin-left: 300px;
+    /* transform: translateY(-50%); */
+    /* margin-left: 300px; */
+    transform: translate(-50%, -50%);
+    left: 50%;
 }
 section #text span
 {
@@ -108,7 +111,7 @@ section #text span
 {
     position: relative;
     top: 100px;
-    padding: 100px;
+    /* padding: 100px; */
     background: #094b65;
 }
 .sec img
@@ -145,6 +148,9 @@ section #text span
     width: 900px;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0;
 }
 .card
 {
@@ -277,6 +283,7 @@ svg circle:nth-child(2)
     color: #fff;
     font-size: 20px;
     background: #094b65;
+    text-align: center;
 }
 .guidelines
 {
@@ -292,7 +299,7 @@ svg circle:nth-child(2)
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 40px;
+    width: 100%;
 }
 .card2
 {
@@ -542,4 +549,26 @@ svg circle:nth-child(2)
     margin-top: 15px;
     font-size: 13px;
     color: #aaa;
+}
+
+
+
+/* Media Queries */
+@media (min-width: 768px) {
+    #header
+    {
+        padding: 30px 100px;
+    } 
+    .container
+    {
+        margin: unset;
+    }
+    .sec
+    {
+        padding: 100px;
+    }
+    .container2
+    {
+        padding: 40px;
+    }
 }
