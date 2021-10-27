@@ -16,13 +16,13 @@ html, body
     background: #fff;
     min-height: 100vh;
 }
-#header
+/* #header
 {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 100px;
+    // padding: 30px 100px; // comment out
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,7 +58,7 @@ html, body
 {
     background: #094b65;
     color: #fff;
-}
+} */
 
 section
 {
@@ -70,6 +70,7 @@ section
     align-items: center;
     top: 100px;
     overflow-x: hidden;
+    margin-top: -7rem;
 }
 section::before
 {
@@ -554,6 +555,9 @@ svg circle:nth-child(2)
     font-size: 13px;
     color: #aaa;
 }
+.desktop-menu-container {
+    display: none;
+}
 
 
 
@@ -561,7 +565,7 @@ svg circle:nth-child(2)
 @media (min-width: 768px) {
     #header
     {
-        padding: 30px 100px;
+        padding: 30px 80px !important;
     } 
     .container
     {
@@ -580,10 +584,79 @@ svg circle:nth-child(2)
         margin-left: 150px;
         margin-right: 150px;
     }
+    .mobile-menu-container {
+        display: none;
+    }
+    .desktop-menu-container {
+        display: block;
+    }
+    ul .nav-item {
+        margin-left: 20px !important;
+    }
 }
 @media (max-width: 550px){
     #header ul 
     {
         flex-direction: column;
     }
+}
+
+
+
+/* Bootstrap */
+#header {
+    padding: 26px 10px;
+    background: transparent;
+}
+#header img {
+    width: 100% !important;
+}
+button.navbar-toggler {
+    border: unset !important;
+    min-width: 4rem !important;
+    padding: 0;
+}
+button.navbar-toggler:hover {
+    background: none !important;
+}
+
+#header ul
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 0 !important;
+    width: 100%;
+}
+#header ul li
+{
+    list-style: none;
+    margin-left: 20px;
+    padding: 5px;
+}
+#header ul li a
+{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #094b65;
+    border-radius: 20px;
+    border-bottom: unset;   
+}
+#header ul li a:hover,
+#header ul li a.active
+{
+    background: #094b65;
+    color: #fff;
+    border-bottom: unset;
+}
+div#navbarSupportedContent {
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+ul .nav-item {
+    margin-left: 0 !important;
+}
+.navbar-brand {
+    margin-right: 0 !important;
+    width: 80px;
 }
